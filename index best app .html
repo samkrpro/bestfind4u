@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stylish Outfit Ideas</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9fafb;
+    }
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card-image-container {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .card-actions {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .card-action-button {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    .card-action-button .material-icons {
+      font-size: 18px;
+      color: #374151;
+    }
+    .product-carousel {
+      display: flex;
+      gap: 8px;
+      padding: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;-ms-overflow-style: none;}
+    .product-carousel::-webkit-scrollbar {display: none;
+    }
+    .product-thumbnail {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #e5e7eb;
+      cursor: pointer;
+    }
+    .footer {
+      background-color: #1f2937;
+      color: #e5e7eb;
+    }
+    .active-tab {
+        border-bottom: 2px solid #1f2937;
+        color: #1f2937;
+        font-weight: 500;
+    }
+    .inactive-tab {
+        color: #6b7280;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body>
+<header class="sticky-header py-4 px-6 flex items-center justify-between">
+<div class="flex items-center">
+<img alt="Best Find Logo" class="h-10 w-10 rounded-full mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTA5Qg-Rbv2r34gSSTEyb-lK2TCBshnVxUPYE761Y1VPext0Oe2KaWhD3rck98_ybdEMUOiN_rBAUixChHewSsFvm703ztYt0lGFvygKS-brMtDzkVkyawFlv6lDJ2luiUabx9Dm32AFSbo7B7dqICaH5WUX5OAz0zKFHpuWaLk4VUcptuWLMNUeOOy48gn0V9GLDqD2TfPCCIL7ijRFVU9GSYZgV4CnxMYPGFFwU0PAbYwSCocBeZKx5DQMXOLs0O9ZTitgXQQQ"/>
+<h1 class="text-xl font-bold text-gray-800">Best Find</h1>
+</div>
+<nav class="hidden md:flex items-center space-x-6">
+<a class="text-gray-600 hover:text-gray-900" href="#">Home</a>
+<a class="text-gray-600 hover:text-gray-900" href="#">About</a>
+<a class="text-gray-600 hover:text-gray-900" href="#">Categories</a>
+<a class="text-gray-600 hover:text-gray-900" href="#">Contact</a>
+</nav>
+<button class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md">
+      Shop My Finds
+    </button>
+<button class="md:hidden text-gray-600">
+<span class="material-icons">menu</span>
+</button>
+</header>
+<main class="p-4 md:p-8">
+<section class="mb-8">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between">
+<div class="flex items-center mb-4 md:mb-0">
+<img alt="Profile Photo" class="h-24 w-24 rounded-full border-4 border-white shadow-lg mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbuPTHRyBPdkYdKUL0ofpUwGucqZwFplCyQsXX_E0u0FZh92Tc0aBFsog3UOBveZLgiqRPa5RXKIVIbo7i7u2Ff0O78WAAaaFn0XrzqKs0ADRlMs6LfsvdMyR0hCD4eHzkGJGyYBM1Kv1tbDJPoodhGdyeZSlP5ZkKCHiZwayFtZ_THvwjGW77et7jo2NKwdH3BMlzH8MVtHl5amnw0AFX5Gq7fU4vuPq_x4eQ1-F16Z43eB98feehYsjF5uAWKisC0aSsw9mHpQ"/>
+<div>
+<h2 class="text-3xl font-bold text-gray-800">Stylish Outfit Ideas</h2>
+<div class="flex items-center text-sm text-gray-500 mt-1">
+<span class="bg-yellow-400 text-yellow-800 px-2 py-0.5 rounded-full text-xs font-semibold mr-2">Bronze</span>
+<span>Status until Sep 30</span>
+</div>
+<p class="text-gray-600 mt-1">Explore the latest trends and styles in women's fashion.</p>
+</div>
+</div>
+<div class="flex space-x-2">
+<button class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg text-sm">
+            Edit profile
+          </button>
+<button class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg text-sm">
+<span class="material-icons text-base">upload</span>
+</button>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">Featured Collections</h3>
+<div class="flex space-x-4 overflow-x-auto pb-4 product-carousel">
+<div class="flex-shrink-0 w-40 text-center">
+<div class="bg-gray-100 h-40 w-40 rounded-full flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-300 cursor-pointer hover:bg-gray-200">
+<span class="material-icons text-4xl">add</span>
+</div>
+<p class="mt-2 text-sm text-gray-700">Add curation</p>
+</div>
+<div class="flex-shrink-0 w-40 text-center">
+<img alt="Fabulous Collection" class="h-40 w-40 rounded-lg object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaKtYV2mUXJVZ72f0Fup9S0lz8w3CCxdVBugC8Ryt3JC87IcyYrXkxaVeUGdH3xVGwQVBiBG6x6rzz_yhIuy59AlbGI0sroqnlaW24DEHtJAfTTfgHFXqln94F0op6svki5m4l2nbsz_ZwtmRE-tRFrq5hR5HByiZTmmDxu7_EiHN8Vfc59Tc1HMiRSybf271FQnr6aSVbSGRXDjWZEdyVLhrIlrpXIuSU-yAfl-bky-paJn5VLDZFH_kxqWNmT3XLBJSzQiTnhg"/>
+<p class="mt-2 text-sm text-gray-700 truncate">fabulous collection...</p>
+<p class="text-xs text-gray-500">5 Posts</p>
+</div>
+<div class="flex-shrink-0 w-40 text-center">
+<img alt="Must-have Gadgets" class="h-40 w-40 rounded-lg object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCY7yE3dj_RjpfXJCGMIcrwSwcgPjFPg-lw62mku0SsLfAeIqq09csR1l1WI4C-KXVJQgh3Vln7cjMQl8nyVix6SO3n42LriYfYYjEoI9vya9T7b3USFUjVPlUlMEAKhXCfxxkhKN9X8k_pS6_KHrzFRDyw-JUXPZriFsz3Pz-opfJG8nGRcyRW4xICq7zCYoGla-zcfRKsxxOMIXwQehzW2CNIG-gGgH-QlvWFGXr4iyX2MFt-MTchoyyJ5g_0i7ioNor499rZQ"/>
+<p class="mt-2 text-sm text-gray-700 truncate">Must-have gadget...</p>
+<p class="text-xs text-gray-500">8 Posts</p>
+</div>
+<div class="flex-shrink-0 w-40 text-center">
+<img alt="Ready to Manifest" class="h-40 w-40 rounded-lg object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiVv6iyPS6Vu1Uw34JjiJGpQsLoD1WiCCDw14O05Sh5h3lzQlOR6ZcVY9nu2DxqNSU07Y2yoZNOXbWxG_nfyroIcvStJR0Tv7rHry94Es_f-2PTDxqnELjredfvi_NVq1iNs4viNlQPdobt6bN8PDqOOe9O5N2TjL9Spsd2Dn3KlpPvm6njAosYHp1E-ZKlFO1-tn9JozEe5_QxF5cbgV05C0GNpTgP2frhhj0bLsNGR9X6P0OOH4COZoVQv_0r-laHFR1HTqUBA"/>
+<p class="mt-2 text-sm text-gray-700 truncate">Ready to manifest...</p>
+<p class="text-xs text-gray-500">5 Posts</p>
+</div>
+<div class="flex-shrink-0 w-40 text-center">
+<img alt="Creative Nail Art" class="h-40 w-40 rounded-lg object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPw7UtDEbF2VgiC4_KdnUrw0J9uyfxWQuoAOTajHkt9JGmVK6pnw3kjv5B3kG3ANMT6lUwxFe6-3lf2myRIbDnBfzZBcQVl4CfWbRJ350cVzuMfHuGA33badLoHhCcdWrJRwhTDINGPc5bzzPZkAI1fZhTN8WOu4fp6dkKe0Roq5rivrVXFfxrxbwiwOoKfp77W8ZNPZr2t9xMukpMlHUIeC_LoqXHE2y-Y3DBLJEoAhdhrJ1ltb03G6n2xBnZ0c_onMLMTRz3OA"/>
+<p class="mt-2 text-sm text-gray-700 truncate">Creative Nail...</p>
+<p class="text-xs text-gray-500">11 Posts</p>
+</div>
+<div class="flex-shrink-0 w-40 text-center">
+<img alt="Shop for Kids" class="h-40 w-40 rounded-lg object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxJiCL4yTKFydrPlJU5MYqvaSA_PFpc2fdMkJdgy30-YfD_sZgT7Mk_MYGUh8xLb5ur_FDQMJis8gIqJKo5q8NtbB3r_HYB-7BP92qQBfzpokdRX8kkroX_RA2Mu6zu6vI96ob-G8Rp9X1kB9Kn45pt_V-xLwJHyoTePCZMelxj4nK5VNl-lrJ36FcNRaUQiRB2b_mRqLvu3JE99HFh0CHi71Xk42bZmaw6XwWldixEw9JGg1vfEH5ezXBcXahi9SfIHT88Mogmg"/>
+<p class="mt-2 text-sm text-gray-700 truncate">Shop for Kids</p>
+<p class="text-xs text-gray-500">8 Posts</p>
+</div>
+<div class="flex-shrink-0 w-40 text-center">
+<img alt="Best Women's Collection" class="h-40 w-40 rounded-lg object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPBZ4dnDFHeMCgFMlcs4sYE0Tkb23Jb8HWf7yiZV0jn7zC61kkZdeLP2CMfmHU6V-QEqIAINMaW6YK5mahlrcRFQJVoM4EnumQU2qb_7zNqmC744aMbO0raWS0LEg7qofYv6BonyICMGsqKqzv1Uiw60xrVcadb0FL1X0z1lDJoBmpa7FodSuip4_r01pU0zSh1iQnKW8tehHPthK_NvK0y44KKfsEpGzeRfQa-yWV7TedjVkccHpg_DKVelaoiWfb_166qYBE5g"/>
+<p class="mt-2 text-sm text-gray-700 truncate">Best women's...</p>
+<p class="text-xs text-gray-500">308 Posts</p>
+</div>
+<div class="flex-shrink-0 w-40 text-center">
+<img alt="Home Decor Ideas" class="h-40 w-40 rounded-lg object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUy5NAGqWhOlATCaCASjJ3uj8YTEoN3IwOmkjNeSXoTegxYm8VQebkD8SoGvooxZ1TnKxcAvXTkmLajoJPZDsEGD6WbHjRkYyc6_8etid_u9gPTKhcZcw-8x4fVJIo7qcDxy34wEzgeRggWGxvVMNov0og6wWC3DpjVDHdCNH86w-sDaLf3ugZR15QIsh-_2irtNqpeQNYQb-tURLBUSavuMMRLzNKwE5QWSlbUw7qE7oqJeRl7HiVpzIPw7Ekir7WNowPhbaH1A"/>
+<p class="mt-2 text-sm text-gray-700 truncate">Home | Decor |...</p>
+<p class="text-xs text-gray-500">11 Posts</p>
+</div>
+</div>
+</section>
+<section class="mb-6">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="flex space-x-6 border-b border-gray-200 mb-4 md:mb-0">
+<button class="py-3 px-1 text-sm active-tab">All</button>
+<button class="py-3 px-1 text-sm inactive-tab hover:text-gray-800">Idea Lists</button>
+<button class="py-3 px-1 text-sm inactive-tab hover:text-gray-800">Photos</button>
+<button class="py-3 px-1 text-sm inactive-tab hover:text-gray-800">Videos</button>
+</div>
+<div class="relative w-full md:w-auto">
+<span class="material-icons absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">search</span>
+<input class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent" placeholder="Search all 428 posts" type="text"/>
+</div>
+</div>
+</section>
+<section class="mb-6 flex flex-wrap gap-2">
+<select class="bg-white border border-gray-300 rounded-lg py-2 px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500">
+<option>Category</option>
+<option>Dresses</option>
+<option>Shoes</option>
+<option>Bags</option>
+<option>Accessories</option>
+</select>
+<select class="bg-white border border-gray-300 rounded-lg py-2 px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500">
+<option>Season</option>
+<option>Spring</option>
+<option>Summer</option>
+<option>Autumn</option>
+<option>Winter</option>
+</select>
+<select class="bg-white border border-gray-300 rounded-lg py-2 px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500">
+<option>Product Type</option>
+<option>Tops</option>
+<option>Bottoms</option>
+<option>Outerwear</option>
+<option>Footwear</option>
+</select>
+</section>
+<section class="grid-container">
+<div class="card">
+<div class="card-image-container">
+<img alt="Grey turtleneck and plaid skirt outfit" class="card-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCneS3wRm0JseW2_3rJt8D91_uE5Fw9tCrCFX2S6tkigx2xRHqrL4Jr8YOKhnK9uA32zVtTu0z4mF9V2ZqMQTC6G8voDs15qe-4m-tmVKLfqmAEYThhM3N_hQjRNg17llP8IMwjeZ20nkvy-o9902wgMchBFJO3Wg970Iq4uvtTppkr5TJSg0Fx8eep_rRRR54ei-6mBKrBG5mWrsXicfWQBHTFmpwmcleN95_SKcfT7H5Ek5d5BzsjBxKYD5aG7DIqOX9Z2_sK_g"/>
+<div class="card-actions">
+<button class="card-action-button"><span class="material-icons">ios_share</span></button>
+<button class="card-action-button"><span class="material-icons">more_horiz</span></button>
+</div>
+</div>
+<div class="product-carousel">
+<img alt="Grey turtleneck sweater" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkcqlNiPQZ9j-7ATN_oTZIELBst6y30bB9KEFJQide5lvpdDTqiDN3gFWtrHI_vMfoNqU3tWpaRMSd2SrOAQi0ypcr7DttNQsFKkm1YOOYT3TihX7JdHqVG1_zO51QjcdAVnBG6uf03IAENC9i7iY3rznkBCdxd-sAv6xGEVqd4oOjP_MAuzD1ALCPJAfLUTMrgYhECUDrHoXsYTHXQ_S3raG2P5dEyaOfkjmU29F_XF-VTS9Ajv303FC6Njxfde07xoBc9LDxQw"/>
+<img alt="Grey backpack" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQDR9YBCGSMrtMcO6Jj3QZxEwI_BI2ReAjcxJPYTq8g7z-oO6wxzOPu9q0uGsmfNNA3qyUKmW51I6FarNwDhAtKhM1pBoj2psfT03vz9xfQvVg7HMrM2jjBHfz_GWRfuzrQoEdEkYMz2R_wjKro0gH76VQc3dfqzjZ0I4goUV2Cv5OOJ7G0z6W_VNcJroO-WkBjO1vIumscmG3wg-73QDJbr9v15F13z7N-6xux3SK9u_-d0_p4LtSLFNtT7b0Yt2pLRmvqC8jUg"/>
+<img alt="Adidas sneakers" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI9buua4pwIsKCjoqp5r0wXj21ai_-4UPE3EsEIWf6ef8MJ1R6WsYRGWH7xL-1JKcoalDfXuXNo-c3lxZeeOaFF-UcJkfVVPWM1zV59VNTTzMw7nQoaC6Lob1eHBz3P9dWLyjdlXB5CaoGxUNDEG9X__JnXCzht-vS3TuwQptIdmpv4FzvqkeqiUUWsg-YLXIkw5iyPmhk5I4JnNUZr1Bdlqd7ZCwYU36IzYiilJfHzZ1-JYoZUKCPCKvJgjoAYrNq8PbZZQIYVQ"/>
+<img alt="Plaid skirt" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2UpjK0paQeCFHhAHynHoqyxicooyFSqYYTNUoI2ljtojO1hud_7Awx7h1B3RSDlP9NMbaHEUTFi_BEjgzgEBgn8M9LsJ1u7A6fd9TtDE8R5ci59pyMX_p0GmW8y-MMScX1TCA3WMTjZLgzyUCO_LIaMcdKlEPIkUdZ1su8xTgTCup_s0S9ZQ3oiLLwiP6IL8fk_rPD0LKNa6BN-o-NCcUzEUvC4ghh4dwGCwqFsal8b3P7a3eDffWXxQY1R0wKGrF-U9KK9WYIA"/>
+<div class="w-10 h-10 rounded-md border border-gray-300 flex items-center justify-center bg-gray-100 text-gray-500 cursor-pointer">
+<span class="material-icons text-lg">arrow_forward_ios</span>
+</div>
+</div>
+<button class="w-full bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold py-2 mt-1">Shop the Look</button>
+</div>
+<div class="card">
+<div class="card-image-container">
+<img alt="White blouse and brown leather skirt outfit" class="card-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo3NQaSUkwb82CXwwR1A75JccKr3zep6pOrSD_ZKMMw11rJoxjtBHXxHnnLmB590SJton58C-BWrd_Vp1YqqHH9tPAyZVsnriwSguU5VOeS_CEHdu1a-JFgz9YEGkVnuP_pIihD6af7AEFD4P3LTShoNQV36OpMFYve9dLllg75NtSCbgvT4K5v71VagKKZ-N3DfcCJwVVQI_BM_l2TMRZ3W303NZabzX3jfMg7Fmek4Ohriu-i6Cp8CddwdLIkPP86RPYQ3K2vA"/>
+<div class="card-actions">
+<button class="card-action-button"><span class="material-icons">ios_share</span></button>
+<button class="card-action-button"><span class="material-icons">more_horiz</span></button>
+</div>
+</div>
+<div class="product-carousel">
+<img alt="White blouse with bow" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE0M4CXvCIU6pcapNrsi6WuSF4LMIRWfdmI6Cgf82gPIf9wwanzVC0c3GN3Bi6MdFgHQOoFji4olsCBXHM8mUQmpANEIztJ7Zvv_eOUuVece0yCzHAOvbXEtoAyC-Je8_3j2_Z88wyymNY8meFyI1mwfhBJra6Z_Ur4bnXMc9fEebhmSv_NdBDlnWAEH19eYf1Ze26DVU5OZxNoJFOiWDoU2_ItMwRHAfxXug4BRk6ab5Khd158gutmR_M8a-5rI-PDXVGk8Yo4g"/>
+<img alt="Brown leather mini skirt" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAEV4hFHCz8cdY5Y3u3tuzKH1vMi83vKxpZmCk2MEk1nr6wLWK-ldyLhHtQbGirZrENixS1MZkBkeWQ5jfjtjWPJoP0kYIobgTZTdJDuUjsx3w_jNMJywoQvQ4rk7rgNvwLOqpbkgVLiorlhF6dzlNN2Ef2AOOAOo5K0mR04-720RwNsYd0WJGKzZDQGqT-tn8tm2cP1vWFepfi5vseW8fbmAKqVPfvGlynW4CUGYR6zLdn2oSj7WxB6HtWwvd_wRCFS1Y9QZr9A"/>
+<img alt="Black pointed heels" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0XWeqhViW2wZ6OO4kuW3yQ_KZJQ7t1x64FqTi1sI0M5XcAksc-I3BTFx39rO2cKUlhmnJ4mL-NTu95Yv6MjkoqwzWp3nMAeFgY4Uery1Qr_5IqhQSlgdb259glv0o17EaBQn_V90EBtV5RH5OhJcDt7-sIPE8Zga_-rpvoKQGABo5H-LlS2saRRRep8dT8SzVd1X6yQC3hL_fNY6fHL5C5ottMiGIX08uLGsgYv3YCTHqtzv2x-V9ySVdoBdm4uGvAgvqOpBf2A"/>
+<img alt="Brown clutch bag" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0cNAqyE7sG_hlus8lVa2I-fQXaDYNvdMMAobeKJ6BnaBVMKOzBVqEJb4GxswLdDh52BGqhOlb2Len76L-vmlXAzNjzynHnUiHnQA1FjIeS2jQzuV8eSWviJG3n1HpLAGeYf2yBFKakltmB20yz6K7qqRlA4WZ9WsWb6JxBrDIXi7bya2GBBxpDhGNGS0vWZDKouP-0oUcgchSjFaBFIiCjTXWskEupWoB38EBEP8FWLB4dAZW-9L6uLl13f4aAkQdaX04MzeRNA"/>
+<div class="w-10 h-10 rounded-md border border-gray-300 flex items-center justify-center bg-gray-100 text-gray-500 cursor-pointer">
+<span class="material-icons text-lg">arrow_forward_ios</span>
+</div>
+</div>
+<button class="w-full bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold py-2 mt-1">Shop the Look</button>
+</div>
+<div class="card">
+<div class="card-image-container">
+<img alt="Cream coat and green skirt outfit" class="card-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRaIGzUgo7TC7ZBGmZEzmR0ByIkhj93F843fxHRizg4IZYXk8eSWVN2R_siMSaXu0K35NmMWy6o591VMMtzpWDdo-WJjwCYJH3bkVVfj5K1ds7Tt-BXaMe6ETKuckDWTnp-fMAx-Va5zNmVPsFyqy5yg8S6uA1z3FkAc751T7HPsqGD0zNWGlC9pDTvqFD17S1QVTRcigbt0MxR66QRUN8DNM3YuGiAAJGGl5BBUxJx6vC1-3vubBXhP2wEvt1CntFIz7Y0X1zcQ"/>
+<div class="card-actions">
+<button class="card-action-button"><span class="material-icons">ios_share</span></button>
+<button class="card-action-button"><span class="material-icons">more_horiz</span></button>
+</div>
+</div>
+<div class="product-carousel">
+<img alt="Cream coat" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMxKcDy4T7DMVwSxozK7o9qMeKe7sVW8wWMIPUft5lI-PvhhlHnUQgKMdRxb711cE86J3t8cpkyrGzTRhXZNEOXSPHbRwlIMV3pBMPu2vMRULsIk8U88LDISL8ULWbrx7bM5h8X_38Ns-jjzFM5cKrmKP6As9Dgo9B-_pb5OP-jksQyGq6jzOPZ-l6CbnxFVH_FRtwmkLFxxBEkIlno6aFe6oHyrSR_b6FcKMVhPGYVns6OispkecwUXbJEe7EQS-AYFV-Xdn5mA"/>
+<img alt="Green satin skirt" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMDu8oAsObFqAFBtfJSpqGz593GyIwnq-gWe1bpewvsG4su2EfXQQa7j00BV9nmnQzDBwTP1HO7jPFZOhuy6NlBTJF3jX9Iu6Uf62LVeEPh-rdFfZTqwTcPQ9sshVkaVXU6n4hsdRdq3O7MRvwKr0-jyfRBdUP4YQJYLIlYMRyvasNzw24IRUa6Yflk2IGXweTx0x1V_ib5jJYuX0F7AJ7s_waihE4LrieQkxPOy7AeM6OVN5v2TaCzjxf8CgGaGrFKVIZsmvGaA"/>
+<img alt="White heels" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWPWuDfJ7zLnoHmqPnH2TPm4OoE9fsRZqyz2NNmHZEL4BSsX2XRUPf1yr5hfEkxZgdY6D4jzDW8mlwJK6t4QIyvX7GJZtZ3YWAM0mKEoY_QGrpaUpgRJX4mPN2yLXHdZCKJ-lGKwbuVgBGEhsl_16-lA6ncanqS-her8J7P_4LLoymLVT8RGphMy7bQL6EzxxKhezAUj4grRflrQhWWk7KTXl3lYN8SONMOFqBxyk7jQpWWajPXHp6c5yD3uCcfydupcYDj1aN8A"/>
+<img alt="Green earrings" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMJGrbPUs0IutG0Vdfj98B-3yObeesuRMOBTPxUHISQXu38n2t84Szr8-5TT6alt7_gCYruaZFvwD8CBzREHD5bHjykxnB18TfCgteZkz77UjoKVz0eWsJXX_gzs0PsnMbTaqkYVmV3B3TnJ71q72Zl10eM2TMZeN7m0hRZAMu5wRQgsV3uoW5W2BitzlGb1OvuUUL3ZPrMKs_30O5mOz4TFKmFlzoHohez42Le56yrYFE0--ix9QqJqHxlyjvPK7U5I9vkbvjow"/>
+<img alt="White handbag" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxt77fnx_ZH_maql2mFO_tF8atGdH7CQN07tOMC1cZ8C_owuCuhWXbGunLbFZNdmF7Fxa_DfaBNPA_JjqDH0xLfEB3L2_M0MK0BmgxaMO-01pulu8c5U6ASifhOOuOZ6Yubf7V4vbj5zek-xXK1CY9lGpdbCD7OX0BWCBa5VHRu7K-fXQ51bBENkTNAM-WB3QVM4Q-zHELqPLl3pcIHtiKuE1A99tQDfE2B1Q_55DaBMAiCKWDAXa3Dr_svp1oKiRNdsH5KYvMEQ"/>
+<div class="w-10 h-10 rounded-md border border-gray-300 flex items-center justify-center bg-gray-100 text-gray-500 cursor-pointer">
+<span class="material-icons text-lg">arrow_forward_ios</span>
+</div>
+</div>
+<button class="w-full bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold py-2 mt-1">Shop the Look</button>
+</div>
+<div class="card">
+<div class="card-image-container">
+<img alt="Leopard print top and jeans outfit" class="card-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2YTLsitoD44kNCaZdu2OrULf2kGSp4pxopzIdaT7gCFX-NqdQl-_EUky_mneDPg-46wMMBg0m0nzYFiCl2nAhsSc44WckBNN8G04JFv-C9PYW1ccI64X1tGsXu3Rr4C1FKu32mkiVTtQLn8j1P7mwNi1pl5MmQ54U4aJPU2NW120wO5o6hlLcHZP9oDUawy23Twr_G_BbIpcyzAhiiwh6HWZxblOHpvZ4dSw9IUFhwrjQqkgzH1eOTElC60vrskkNnHYmNEeLjQ"/>
+<div class="card-actions">
+<button class="card-action-button"><span class="material-icons">ios_share</span></button>
+<button class="card-action-button"><span class="material-icons">more_horiz</span></button>
+</div>
+</div>
+<div class="product-carousel">
+<img alt="Pink cowboy boots" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF9eLSfN5TWIymE1yHdnADV8_EJHUmwwlJK4wuhwQXy_LFy2jpb2hvrg1UqPjnTQwQiF1IUu-ysvGPqwm44yINlHEYkKsvERNvTVEsgv3SuPxwMpluditBfvp7umfvx2xX_iGR7cZm6syq70igavSX5b1TyAh-QGZ61PWQ_3My3UVwhVAaMy4WTCi0JahieOu31_epIehMkFmJirFr6cRDlN6MoPfn-uk_mNKYkgr-dBpnZf5TpdNIebfJh7xRK5NVDzI-E_LySA"/>
+<img alt="Leopard print corset top" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5DC9toj3pfH3c-ozHg4P75_2WnwG9micpCsyJy8dBrangUSgovcBzrSmrHncfqDj4e2-m1UTjCMpnCv_xOPqCnf_GPU5L7xyQi4HhF9xKg9BrDlC7wWrSkQyZwIImxQvlNsZ34DwaDSX5p9EYW3Yd2PwJW-DCAFvda-x7ijGGcGjizVCD0o1yiUIxgd9FNxPqVs9SYdcLVkukzewKiv-8gob9SS3YBw-a0aNahO4awWXcOJOpeMZ6dhLrBzOvQ86h9zE0oSKSMA"/>
+<img alt="High-waisted jeans" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvOu_H966xulTKGPgJJHQRUcIiOaIVMrCMYMhlIetuiwP4ZGrqD2_3HkJ_LHAQoWPIbnJxq9Eb-nhQa5KyVONMF4RVekwgorV-WHGw5BL9BwEpjEUI6WY__gSV-YWPjNcvPeYrULm11_seWeQvy_Xx-CHJc1TAULWAfV1-k2giEj6_4of5AVQ9Dugv_VXDWzRpiIiU0YJ3sVX-DFkPFNBFnlnpnuqJxLQokMyXy6SIKRP10qB47YImbakRMZZG3tOIdgzFtYIlUw"/>
+<img alt="Brown handbag" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr8orpO5dZFzbF0U70CqgNZJ0XN4xenDFKX5JHJjOOmmF8_bN84Q0vsJgefY5O91XpvJTIM0sXJSOQ32vvDufSd3Zth7j3qzKMvAWmPCYN_snSswOvQ3m14XteVD1NNR_eJeWc0jeQqe91jcfOUUjML88IjT81CSoBrJZgZ5mJETMbkrMl1H0svIupS3ByWCzcIaOToSVceXPwbFoXcpaapFoGl_yUAVJ7AxQEegE5X3XkPLb83FNwzfiJmOCEx3CoXfkRbsh8YQ"/>
+<div class="w-10 h-10 rounded-md border border-gray-300 flex items-center justify-center bg-gray-100 text-gray-500 cursor-pointer">
+<span class="material-icons text-lg">arrow_forward_ios</span>
+</div>
+</div>
+<button class="w-full bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold py-2 mt-1">Shop the Look</button>
+</div>
+<div class="card">
+<div class="card-image-container">
+<img alt="Beige coat and white pants outfit" class="card-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMOc1rVFYOv1ufRWCuv9PKY1y5cjCzio34yQPxmmX2pibAczl0xoBkFNi3uodkPtVja94Cz6PyHxb5Pm7K4mBjIXRDSlNy5VFEYHqe6dzewSbFLAsjhnBW_Z8qx0ytZXV-HQZ2UGQhAsibzi6NMGIDtO4_W7eTsGHjqDDmsSiI72tzMi0vjYrHFNGJHIjITb_cJueJl6ph0cKtqbjQ0mqmQdHNgQ92_myTbVZfUlHt4HFJjuBB73ic0Yz9qaCLgXq_HWbUslQqBA"/>
+<div class="card-actions">
+<button class="card-action-button"><span class="material-icons">ios_share</span></button>
+<button class="card-action-button"><span class="material-icons">more_horiz</span></button>
+</div>
+</div>
+<div class="product-carousel">
+<img alt="White wide-leg pants" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy2TdpUeR1oX0Ycc66SCNbGKdUpE4JJ8ZH5oCWGEoVbme1mVv-hFEGNarVe2DA2ToUaQ6JFQtcAqs_ZkAnRlYy_Jrhe08r01nRDgYg4uWQ-4lj4xXrzT_WpIxta9SVEBh9nWUJoN8AC6THcB31isSOzd2Nc8tj2Aw4cWrFkElfRCAztcUFYqoLfPQ0bh8lVoAPB9fPJFWbSdacFlnzkmUvXYsG-ByDOVReyilXlP_v4UjYa3V9hJSE3LHMI03-Dnl614lUSPge8A"/>
+<img alt="Beige trench coat" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoEAGCf5tEsAV1QsyqmP9ONHd_z5QV8Cc9gPjPCULAxzo45wliHobgl-ywAiIuTmcC-hUyEtgVRjqPShqVRBJABXrrFU3oP0vjYhTE2xLunQbY7_xqL_XF--PovUPSV9nAEZKr4dd4vLfz_scilEo8z6Wkj9MK5KNXqTaAzo0AxRQqU3_pXwkfUI9wYqo0ZH9LBEI5AF3yg6uWolH0pR7TiAMnNnq9V1yzfKYL1QuAMl6-IwFWg8KyT7kTpQxISeoGmx1eZ_I68A"/>
+<img alt="Pointed slingback heels" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz-wgcsfuGqvqSx4YXMElfN77-IY_LXGivLIzf87ujmwVT3HF2ftHR4zwIzClKmGo249HIL6RE2sDoBuggUsFV0TAwCnH3Z69223HMGm_ELKEZASaQkGFl27R7nauk0vqDzUfpXLuwtnqME6mOjrtvq6cB-wJUvOAcghndI522pKPSSiqjk3M9sxRwnP4XL__BU84-Gl3UW0y0VQd38MVX6z7eZBD1GqYYlGvRNvjJfBtS4Usfx2rvIdMdSRV2Mfd2kkOubqn2qQ"/>
+<img alt="White collared shirt" class="product-thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDyNfMmsD3F_MhbxNoMIdZdaN-zlfhUkGeODaeRmFgUAy8hFrInc2lJOxc0pYtpvh0EyQlbBx4-YO4_IexAxmFl__moYJd-XOFvPzJB4ltrVJ0-IbdzEPPXVI9LM_n9T8oeo24YawX9WG6mWujHAAGZAGJlcDkjLfzzjbcTS8l2dSfiT38L9x1pMPrE9onwYixjRhJGh3EjwmIicrXhwnKLPMc1U2jNQwt8rSaore-cloN0pbgbxbEKp0KCx5UBJtI0l_9TghKPg"/>
+<div class="w-10 h-10 rounded-md border border-gray-300 flex items-center justify-center bg-gray-100 text-gray-500 cursor-pointer">
+<span class="material-icons text-lg">arrow_forward_ios</span>
+</div>
+</div>
+<button class="w-full bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold py-2 mt-1">Shop the Look</button>
+</div>
+</section>
+</main>
+<footer class="footer py-12 px-6 text-center md:text-left">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<h5 class="text-lg font-semibold mb-4 text-white">Contact Info</h5>
+<p class="text-sm">Email: info@bestfind.com</p>
+<p class="text-sm">Phone: (123) 456-7890</p>
+</div>
+<div>
+<h5 class="text-lg font-semibold mb-4 text-white">Follow Us</h5>
+<div class="flex justify-center md:justify-start space-x-4">
+<a class="hover:text-pink-400" href="#"><img alt="Instagram Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn5WPjIMeeSf_YqW968R3vjwenksOqc4B4WN2YZToOqqTLOCcK8tFirE0g908sOaAW8hNtQWnns1QT6E7WB4Sj91B8OAAOup-DLHtAigZ9NEQOTfSt7aGjH_eAUbA3EAkMV2HkcRfcSUKh1Os_vKOHg4E_QbVucB-p2oyB-qx67A14Uzpwi-PFck0vEgwiFGuQQj6_ZmMyKXsKZFpjr8xN3C5sEDpYsJeO9cdbzVUt20v2RuSGZq2Yqj8rnkVTtmgxJd7TMm6bRw"/></a>
+<a class="hover:text-pink-400" href="#"><img alt="Pinterest Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtsz4N5mIOsGFO0eOUvTpt4tuofcjyMDb1q9-UmrQIuXsKrL6anesBu9iACKQE1iPHHDE7MJkS4u-yvozQO4O-lplJojevcpve4W4G-UiGjuM5EAImW43ApDRi1vkxS1NqxOePoUZj5rMATW2hZpWeeyovVUFxw8iQqgGfY2Jf6rEHJ_LH0dHCsZaTeTjAUvl3TEEH18ajhxxo68AfuNtMJLvcnTR9FXc8yzdi2pbRoSOlojEywprCcCO9pcgzZ_9hp2cv4nnTfw"/></a>
+<a class="hover:text-pink-400" href="#"><img alt="Facebook Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8JezOf3c13DfXXG4isiSACEItcDym1GvVoiX8tENO2QV0LfnAayEcdFWpePG-z5-LEbidszyVOeQwiCue-j8ZkgaKZ8HsLD9iy63dkF33raaPL5S0LTjcY5aFx-eRQbghBi8zjziV4-P42aKmR0-Imf8ix323CQqPNwNuYOTfPYNmgtRjN_1ywiLUBbSoBtTtcC1zz3RNsOkVTdGsyMxPZ0oTlHS688Ivdt7AzLc4DYKtSeGjVQPvAN1E_CJcvCcCYPlv82V4IA"/></a>
+</div>
+</div>
+<div>
+<h5 class="text-lg font-semibold mb-4 text-white">Quick Links</h5>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-pink-400" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-pink-400" href="#">Terms of Service</a></li>
+<li><a class="hover:text-pink-400" href="#">Affiliate Disclosure</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-8 border-t border-gray-700 pt-8 text-sm text-center">
+<p>© 2023 Best Find. All rights reserved.</p>
+<p class="mt-1">As an affiliate, I earn from qualifying purchases.</p>
+</div>
+</footer>
+
+</body></html>
